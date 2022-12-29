@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace Act8
 {
-    internal class Program
+    class Node
     {
-        static void Main(string[] args)
+        public string info;
+        public Node leftchild;
+        public Node rightchild;
+
+
+        public Node(string i, Node l, Node r)
         {
+            info = i;
+            leftchild = l;
+            rightchild = r;
         }
     }
 }
-
