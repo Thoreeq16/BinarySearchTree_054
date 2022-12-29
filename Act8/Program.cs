@@ -20,4 +20,12 @@ namespace Act8
             rightchild = r;
         }
     }
+    class program
+    {
+        public Node ROOT;
+        public program()
+        {
+            ROOT = null;
+        }
+    }
 }
