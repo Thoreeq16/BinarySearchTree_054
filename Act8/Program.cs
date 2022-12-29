@@ -20,10 +20,10 @@ namespace Act8
             rightchild = r;
         }
     }
-    class program
+    class BinaryTree
     {
         public Node ROOT;
-        public program()
+        public BinaryTree()
         {
             ROOT = null;
         }
@@ -92,6 +92,28 @@ namespace Act8
                 Console.WriteLine(ptr.info + " ");
                 preorder(ptr.leftchild);
                 preorder(ptr.rightchild);
+            }
+        }
+        public void postorder(Node ptr) /* performs the postorder traversal of the tree */
+        {
+            if (ROOT == null)
+            {
+                Console.WriteLine("Tree is empty");
+                return;
+            }
+            if (ptr != null)
+            {
+                postorder(ptr.leftchild);
+                postorder(ptr.rightchild);
+                Console.WriteLine(ptr.info + " ");
+            }
+        }
+        static void Main(string[] args)
+        {
+            BinaryTree x = new BinaryTree();
+            while (true)
+            {
+
             }
         }
     }
